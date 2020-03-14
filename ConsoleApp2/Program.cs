@@ -10,15 +10,13 @@ namespace ConsoleApp2
     {
         public static void Main(string[] args)
         {
-
+            string path = args[0];
             string arg1 = args[1];
             string format = args[2];
 
-            var today = DateTime.Now;
-            var path = @"C:\Users\Саша\Desktop\dane.csv";
             OwnComparer ownComparer = new OwnComparer();
             HashSet<Student> hashStudent = new HashSet<Student>(ownComparer);
-            StreamWriter writer = new StreamWriter(@"C:\Users\Саша\Desktop\log.txt");
+            StreamWriter writer = new StreamWriter(@"log.txt");
 
             var lines = File.ReadLines(path);
             try
